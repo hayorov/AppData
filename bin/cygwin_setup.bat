@@ -160,7 +160,8 @@ exit /b 0
         mkdir "%_ROOTDIR%"
     )
     echo %_PREFIX% Fetching latest %_SETUP_EXE% from cygwin.com
-    wget -O "%_ROOTDIR%\%_SETUP_EXE%" http://cygwin.com/%_SETUP_EXE%
+    echo wget-O "%_ROOTDIR%\%_SETUP_EXE%" http://cygwin.com/%_SETUP_EXE%
+    wget-O "%_ROOTDIR%\%_SETUP_EXE%" http://cygwin.com/%_SETUP_EXE%
 goto :eof
 
 
