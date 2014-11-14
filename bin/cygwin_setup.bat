@@ -47,18 +47,6 @@ setlocal
 goto :main
 
 :load_config
-    set _CONFFILE=%~dp0\cygwin_setup_config.bat
-    if exist "%_CONFFILE%" goto :endif_check_conffile
-        echo %_PREFIX% ERROR: Configuration file "%_CONFFILE%" not found.
-        exit /b 1
-    :endif_check_conffile
-    set _PACKAGES=
-    set _ROOTDIR=
-    set _SITE=
-    set _CONFIG_SYSLOGD=
-    set _CONFIG_SSHD=
-    set _CONFIG_LSA=
-    call "%_CONFFILE%"
     if "%_PACKAGES%" == "" (
         echo %_PREFIX% ERROR: _PACKAGES not defined in "%_CONFFILE%"
         exit /b 1
